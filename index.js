@@ -85,17 +85,17 @@ function addTask() {
     function editBtnHandler() {
         tgl = !tgl;
         if (tgl) {
-            editBtn.src = 'pencil.png'
-            inp.classList.add('borderbox');
-            inp.focus();
-            inp.removeAttribute('disabled')
-            okBtn.removeEventListener('click', okBtnHandler)
-        } else {
-            editBtn.src= 'pencilPink.png'
+            editBtn.src = 'pencilPink.png'
             inp.classList.remove('borderbox');
             inp.blur();
-            inp.setAttribute('disbaled', '')
+            inp.setAttribute('disabled','')
             okBtn.addEventListener('click', okBtnHandler)
+        } else {
+            editBtn.src= 'pencil.png'
+            inp.classList.add('borderbox');
+            inp.focus();
+            inp.removeAttribute('disbaled', '')
+            okBtn.removeEventListener('click', okBtnHandler)
         }
     }
 
