@@ -86,13 +86,13 @@ function addTask() {
         tgl = !tgl;
         if (tgl) {
             editBtn.src = 'pencilPink.png'
-            inp.classList.remove('borderbox');
+            inp.removeAttribute('class');
             inp.blur();
             inp.setAttribute('disabled','')
             okBtn.addEventListener('click', okBtnHandler)
         } else {
             editBtn.src= 'pencil.png'
-            inp.classList.add('borderbox');
+            inp.setAttribute('class','borderbox');
             inp.focus();
             inp.removeAttribute('disbaled', '')
             okBtn.removeEventListener('click', okBtnHandler)
